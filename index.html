@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EvenBettr</title>
+  <meta name="description" content="EvenBettr is a quiet junction for systems, signals, tools, and ongoing creative work." />
+  <style>
+    :root {
+      --green: #123f2a;
+      --green-soft: #e8f0ea;
+      --text: #111111;
+      --muted: #5d665f;
+      --line: #d8dfda;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--white);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 1120px;
+    }
+
+    .shell {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 56px;
+      align-items: end;
+    }
+
+    .brand {
+      font-size: clamp(64px, 14vw, 176px);
+      line-height: 0.82;
+      letter-spacing: -0.085em;
+      font-weight: 900;
+      color: var(--green);
+      text-transform: uppercase;
+    }
+
+    .intro {
+      max-width: 520px;
+      margin-top: 32px;
+      font-size: clamp(18px, 2vw, 24px);
+      line-height: 1.35;
+      color: var(--text);
+    }
+
+    .subtext {
+      max-width: 520px;
+      margin-top: 18px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .nodes {
+      border-left: 1px solid var(--line);
+      padding-left: 32px;
+    }
+
+    .nodes-label {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .node-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .node {
+      display: block;
+      text-decoration: none;
+      color: var(--green);
+      border: 1px solid var(--line);
+      padding: 18px 20px;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .node:hover {
+      transform: translateY(-2px);
+      border-color: var(--green);
+      background: var(--green-soft);
+    }
+
+    .node strong {
+      display: block;
+      font-size: 18px;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .node span {
+      display: block;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    .node.disabled {
+      pointer-events: none;
+      opacity: 0.62;
+    }
+
+    footer {
+      margin-top: 72px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 820px) {
+      body {
+        align-items: flex-start;
+        padding: 28px 20px;
+      }
+
+      .shell {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .nodes {
+        border-left: none;
+        border-top: 1px solid var(--line);
+        padding-left: 0;
+        padding-top: 28px;
+      }
+
+      footer {
+        flex-direction: column;
+        margin-top: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="shell" aria-label="EvenBettr home">
+      <div>
+        <h1 class="brand">Even<br />Bettr</h1>
+        <p class="intro">A central place for systems, signals, tools, and ongoing work.</p>
+        <p class="subtext">This is the junction point. Some nodes are active. Some are still forming. The structure will stay simple while the work develops.</p>
+      </div>
+
+      <aside class="nodes" aria-label="Project nodes">
+        <p class="nodes-label">Current Nodes</p>
+        <nav class="node-list">
+          <a class="node" href="https://wanderingsignalstudios.com/">
+            <strong>Wandering Signal Studios</strong>
+            <span>Creative infrastructure and transmissions from the in-between.</span>
+          </a>
+
+          <a class="node" href="https://carbonradio.live/">
+            <strong>Carbon Radio</strong>
+            <span>A continuous broadcast node built around sound, signal, and atmosphere.</span>
+          </a>
+
+          <a class="node" href="https://ruggedclarity.co/">
+            <strong>Rugged Clarity</strong>
+            <span>Practical tools for decisions, discipline, and grounded forward motion.</span>
+          </a>
+
+          <a class="node disabled" href="#" aria-disabled="true">
+            <strong>Future Node</strong>
+            <span>Reserved space for the next system when it earns a place here.</span>
+          </a>
+        </nav>
+      </aside>
+    </section>
+
+    <footer>
+      <span>EvenBettr is in development.</span>
+      <a href="mailto:hello@evenbettr.com">hello@evenbettr.com</a>
+    </footer>
+  </main>
+</body>
+</html>
